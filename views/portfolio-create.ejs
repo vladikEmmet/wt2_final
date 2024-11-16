@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/portfolio-create.css">
+    <title>Create portfolio</title>
+</head>
+<body>
+<header class="header" id="header">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/portfolio">Articles</a></li>
+            <li><a href="/population">Population Info</a></li>
+            <li><a href="/advice">Today's advice</a></li>
+            <li class="profile-btn">
+                <a href="/profile">Profile</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="portfolio-create-container container">
+        <h1>Create article</h1>
+        <form class="create-article-form">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" placeholder="My first article" required/>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Enter description" required></textarea>
+            </div>
+            <div>
+                <label for="image-upload">Images (1-3)</label>
+                <input type="file" id="image-upload" multiple accept="image/*" />
+            </div>
+            <button type="submit" class="submit-btn">Create</button>
+        </form>
+    </div>
+</main>
+<footer class="footer" id="footer">
+    <p>BDA-2303</p>
+    <p>Vladislav Obedkov</p>
+    <p>&copy; 2024</p>
+</footer>
+<script src="/scripts/portfolio-create.js"></script>
+<script src="/scripts/main.js"></script>
+</body>
+</html>

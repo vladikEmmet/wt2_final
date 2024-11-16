@@ -1,0 +1,55 @@
+/* Картинка в карусели */
+.swiper-container {
+    width: 100%;
+    height: 400px; /* Установите нужную высоту для вашего контейнера */
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняет пропорции изображений и заполняет контейнер */
+}
+
+/* Стрелки для навигации */
+.swiper-button-next, .swiper-button-prev {
+    color: #fff; /* Цвет стрелок */
+    font-size: 30px; /* Размер стрелок */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Изменение фона при наведении */
+}
+
+/* Пагинация (точки внизу) */
+.swiper-pagination {
+    bottom: 10px; /* Позиция снизу */
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.7); /* Цвет точек */
+    width: 12px; /* Размер точек */
+    height: 12px;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ff7a00; /* Цвет активной точки */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .swiper-container {
+        height: 300px; /* Уменьшаем высоту карусели на мобильных устройствах */
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        font-size: 24px; /* Уменьшаем размер стрелок */
+        padding: 8px;
+    }
+}

@@ -1,0 +1,38 @@
+.portfolio-create-container h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.create-article-form {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.create-article-form div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.create-article-form input {
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.create-article-form textarea {
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.create-article-form button {
+    margin-top: 10px;
+    background-color: #7159c1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}

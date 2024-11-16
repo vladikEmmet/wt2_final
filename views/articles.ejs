@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/articles.css">
+    <title>Articles</title>
+</head>
+<body>
+<header class="header" id="header">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/portfolio">Articles</a></li>
+            <li><a href="/population">Population Info</a></li>
+            <li><a href="/advice">Today's advice</a></li>
+            <li class="profile-btn">
+                <a href="/profile">Profile</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="articles-container container">
+        <h1>Articles</h1>
+        <% if (role === 'admin' || role === 'editor') { %>
+            <a href="/portfolio/create" class="create-article-btn">Create Article</a>
+        <% } %>
+        <div class="articles">
+<!--            <div class="article">-->
+<!--                <h2 class="article-title"></h2>-->
+<!--                <p class="article-content"></p>-->
+<!--            </div>-->
+        </div>
+    </div>
+</main>
+<footer class="footer" id="footer">
+    <p>BDA-2303</p>
+    <p>Vladislav Obedkov</p>
+    <p>&copy; 2024</p>
+</footer>
+<script src="/scripts/articles.js"></script>
+<script src="/scripts/main.js"></script>
+</body>
+</html>

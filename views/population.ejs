@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/population.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Population</title>
+    <script>
+        const role = '<%= role %>';
+    </script>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/portfolio">Articles</a></li>
+                <li><a href="/population">Population Info</a></li>
+                <li><a href="/advice">Today's advice</a></li>
+                <li class="profile-btn">
+                    <a href="/profile">Profile</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="bank-container container">
+            <h1>Population Graphs</h1>
+<!--            <form id="filters-form">-->
+<!--                <label for="country">Country:</label>-->
+<!--                <select id="country" name="country">-->
+<!--                    <option value="WLD">World</option>-->
+<!--                    <option value="USA">United States</option>-->
+<!--                    <option value="CHN">China</option>-->
+<!--                    <option value="IND">India</option>-->
+<!--                    &lt;!&ndash; Добавьте другие страны &ndash;&gt;-->
+<!--                </select>-->
+
+<!--                <label for="indicator">Indicator:</label>-->
+<!--                <select id="indicator" name="indicator">-->
+<!--                    <option value="SP.POP.TOTL">Population, total</option>-->
+<!--                    <option value="SP.POP.GROW">Population growth (annual %)</option>-->
+<!--                    <option value="NY.GDP.MKTP.CD">GDP (current US$)</option>-->
+<!--                    &lt;!&ndash; Добавьте другие индикаторы &ndash;&gt;-->
+<!--                </select>-->
+
+<!--                <label for="startYear">Start Year:</label>-->
+<!--                <input type="number" id="startYear" name="startYear" min="1960" max="2023" value="2000">-->
+
+<!--                <label for="endYear">End Year:</label>-->
+<!--                <input type="number" id="endYear" name="endYear" min="1960" max="2023" value="2023">-->
+
+<!--                <button type="submit">Apply Filters</button>-->
+<!--            </form>-->
+            <form id="filters-form" <% if (role !== 'admin' && role !== 'editor') { %>style="display: none;"<% } %>>
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="WLD">World</option>
+                    <option value="USA">United States</option>
+                    <option value="CHN">China</option>
+                    <option value="IND">India</option>
+                </select>
+
+                <label for="indicator">Indicator:</label>
+                <select id="indicator" name="indicator">
+                    <option value="SP.POP.TOTL">Population, total</option>
+                    <option value="SP.POP.GROW">Population growth (annual %)</option>
+                    <option value="NY.GDP.MKTP.CD">GDP (current US$)</option>
+                </select>
+
+                <label for="startYear">Start Year:</label>
+                <input type="number" id="startYear" name="startYear" min="1960" max="2023" value="2000">
+
+                <label for="endYear">End Year:</label>
+                <input type="number" id="endYear" name="endYear" min="1960" max="2023" value="2023">
+
+                <button type="submit">Apply Filters</button>
+            </form>
+
+            <canvas id="population-chart"></canvas>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <p>BDA-2303</p>
+        <p>Vladislav Obedkov</p>
+        <p>&copy; 2024</p>
+    </footer>
+
+    <script src="/scripts/population.js"></script>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

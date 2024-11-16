@@ -1,0 +1,60 @@
+.article-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.article-date-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    color: #a2a2a2;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.article-description {
+    margin-top: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #000;
+}
+
+.article-controls {
+    margin-top: 15px;
+}
+
+.delete-article-btn {
+    background: #f13b3b;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-article-btn {
+    display: inline-block;
+    color: #fff;
+    background: #dc7a14;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: none;
+}
+
+.back-link:hover::before {
+    content: '← ';
+    margin-right: 5px;
+}

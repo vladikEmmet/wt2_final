@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/article.css">
+    <link rel="stylesheet" href="/styles/swiper.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title><%= portfolio.title %></title>
+</head>
+<body>
+<header class="header" id="header">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/portfolio">Articles</a></li>
+            <li><a href="/population">Population Info</a></li>
+            <li><a href="/advice">Today's advice</a></li>
+            <li class="profile-btn">
+                <a href="/profile">Profile</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="article-container container">
+    <div class="article-images">
+        <div class="swiper-container">
+            <div class="swiper-wrapper article-images"></div>
+            <!-- Добавьте элементы управления -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <% if (role === 'admin') { %>
+        <div class="article-controls">
+            <a href="/portfolio/edit/<%= portfolio.id %>" class="edit-article-btn">Edit Article</a>
+            <button class="delete-article-btn">Delete Article</button>
+        </div>
+    <% } %>
+    <h1 class="article-title"></h1>
+    <div class="article-date-info">
+        <p class="article-author"></p>
+        <p class="article-creation-date"></p>
+        <p class="article-update-date"></p>
+    </div>
+    <p class="article-description"></p>
+    <a href="/portfolio" class="back-link">Back to articles</a>
+</div>
+<footer class="footer" id="footer">
+    <p>BDA-2303</p>
+    <p>Vladislav Obedkov</p>
+    <p>&copy; 2024</p>
+</footer>
+<script src="/scripts/article.js"></script>
+<script src="/scripts/main.js"></script>
+</body>
+</html>

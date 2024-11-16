@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/tfa.css">
+    <title>Profile</title>
+</head>
+<body>
+<header class="header" id="header">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/portfolio">Articles</a></li>
+            <li><a href="/population">Population Info</a></li>
+            <li><a href="/advice">Today's advice</a></li>
+            <li class="profile-btn">
+                <a href="/profile">Profile</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="tfa-container container">
+        <h1>Enable Two-Factor Authentication</h1>
+        <div class="qr"></div>
+        <div>
+            <p>Scan the QR code with your authenticator app</p>
+            <p>Enter the code from the app below</p>
+            <form id="tfa-form">
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer class="footer" id="footer">
+    <p>BDA-2303</p>
+    <p>Vladislav Obedkov</p>
+    <p>&copy; 2024</p>
+</footer>
+<script src="/scripts/tfa.js"></script>
+<script src="/scripts/main.js"></script>
+</body>
+</html>

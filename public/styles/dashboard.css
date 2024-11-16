@@ -1,0 +1,21 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    width: 100vw;
+}
+
+.main-container h1,
+.main-container p {
+    text-align: center;
+}
+
+.main-container h1 {
+    font-size: 24px;
+}
+
+.main-container p {
+    font-size: 20px;
+    margin-top: 10px;
+}

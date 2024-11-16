@@ -1,0 +1,25 @@
+.advice-container h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.date-card,
+.advice-card {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #C6C6C6;
+    border-radius: 10px;
+    margin-top: 40px;
+    -webkit-box-shadow: inset 0px 0px 13px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 13px -6px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 13px -6px rgba(0,0,0,0.75);
+}
+
+.date-content,
+.advice-content{
+    font-size: 18px;
+}
